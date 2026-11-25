@@ -1,0 +1,14 @@
+import { Outlet, createFileRoute } from "@tanstack/react-router";
+import { AdminShell } from "@/components/admin/AdminShell";
+
+export const Route = createFileRoute("/_authed/admin")({
+  component: AdminLayout,
+});
+
+function AdminLayout() {
+  return (
+    <AdminShell>
+      <Outlet />
+    </AdminShell>
+  );
+}
